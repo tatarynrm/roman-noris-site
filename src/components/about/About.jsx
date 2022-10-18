@@ -1,7 +1,6 @@
 import React from "react";
 import "./about.css";
-import ME from "../../assets/me-about.jpg";
-import ME1 from "../../assets/me-about-1.jpg";
+import ME from "../../assets/me-about-1.jpg";
 import { FaAward } from "react-icons/fa";
 import { FiUsers } from "react-icons/fi";
 import { RiFolderSettingsLine } from "react-icons/ri";
@@ -13,7 +12,7 @@ const About = () => {
       <div className="container about__container">
         <div className="about__me">
           <div className="about__me-image">
-            <img src={ME1} alt="me" />
+            <img src={ME} alt="me" />
           </div>
         </div>
 
