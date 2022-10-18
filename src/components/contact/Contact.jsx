@@ -1,14 +1,23 @@
 import React from "react";
+import axios from "axios";
 import "./contact.css";
 import { MdOutlineEmail } from "react-icons/md";
 import { BsTelegram, BsMessenger } from "react-icons/bs";
 import { useRef } from "react";
 import emailjs from "emailjs-com";
+import { sendMessageTelegram } from "../../services/telegram";
+import { useState } from "react";
+import Modal from "../modal/Modal";
 const Contact = () => {
+  const [modalActive, setModalActive] = useState(false);
+  const [name, setName] = useState("");
   const form = useRef();
+  const handleChange = (e) => {
+    setName(e.target.value);
+  };
   const sendEmail = (e) => {
     e.preventDefault();
-
+    sendMessageTelegram(e);
     emailjs
       .sendForm(
         "service_xk4wlsn",
@@ -24,6 +33,8 @@ const Contact = () => {
           console.log(error.text);
         }
       );
+    setModalActive(!modalActive);
+    document.body.style.overflow = "hidden";
     e.target.reset();
   };
   return (
@@ -56,6 +67,7 @@ const Contact = () => {
           <input
             type="text"
             name="name"
+            onChange={handleChange}
             placeholder="Your Full Name"
             required
           />
@@ -71,6 +83,13 @@ const Contact = () => {
           </button>
         </form>
       </div>
+      {modalActive ? (
+        <Modal
+          modalActive={modalActive}
+          setModalActive={setModalActive}
+          name={name}
+        />
+      ) : null}
     </section>
   );
 };

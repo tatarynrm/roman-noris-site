@@ -7,6 +7,7 @@ import Services from "./components/services/Services";
 import Testimonials from "./components/testimonials/Testimonials";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
+import Modal from "./components/modal/Modal";
 const App = () => {
   return (
     <>
