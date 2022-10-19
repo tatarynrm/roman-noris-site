@@ -4,7 +4,6 @@ import { FcApproval } from "react-icons/fc";
 const Modal = ({ modalActive, setModalActive, name, userLocation }) => {
   const hideModal = () => {
     setModalActive(!modalActive);
-    document.body.style.overflow = "auto";
   };
   return (
     <div className="modal__window">

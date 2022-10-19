@@ -35,7 +35,6 @@ const Contact = ({ userLocation }) => {
         }
       );
     setModalActive(!modalActive);
-    document.body.style.overflow = "hidden";
     e.target.reset();
   };
   return (

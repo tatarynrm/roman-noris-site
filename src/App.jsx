@@ -7,16 +7,12 @@ import Services from "./components/services/Services";
 import Testimonials from "./components/testimonials/Testimonials";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
-import Modal from "./components/modal/Modal";
 import { useEffect } from "react";
 import { useState } from "react";
+
 const App = () => {
   const [userLocation, setUserLocation] = useState([]);
-  useEffect(() => {
-    // navigator.geolocation.getCurrentPosition(console.log, console.log);
-  }, []);
-  // console.log(navigator.geolocation);
-  // navigator.geolocation.getCurrentPosition(console.log, console.log);
+
   const sucessfulLookup = (position) => {
     const { latitude, longitude } = position.coords;
     fetch(
