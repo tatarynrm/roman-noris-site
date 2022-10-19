@@ -22,6 +22,7 @@ const App = () => {
         const preData = [];
         preData.push(data);
         setUserLocation(preData);
+        console.log(userLocation);
       });
   };
 
