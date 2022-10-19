@@ -9,14 +9,26 @@ import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
 import { useEffect } from "react";
 import { useState } from "react";
-import { sucessfulLookup } from "./services/userGeolocation";
-
+// import sucessfulLookup from "./services/userGeolocation";
 const App = () => {
   const [userLocation, setUserLocation] = useState([]);
+  const sucessfulLookup = (position) => {
+    const { latitude, longitude } = position.coords;
+    fetch(
+      `https://api.bigdatacloud.net/data/reverse-geocode-client?${latitude}&${longitude}&localityLanguage=en`
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        const preData = [];
+        preData.push(data);
+        setUserLocation(preData);
+      });
+  };
 
   useEffect(() => {
-    navigator.geolocation.getCurrentPosition(sucessfulLookup, console.log);
+    navigator.geolocation.getCurrentPosition(sucessfulLookup);
   }, []);
+
   return (
     <>
       <Header />
