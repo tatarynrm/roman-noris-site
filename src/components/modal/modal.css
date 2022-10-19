@@ -49,6 +49,18 @@
   font-size: 1.3rem;
 }
 
+.modal__user-location {
+  background: var(--color-bg);
+  width: fit-content;
+  padding: 0.4rem;
+  margin-top: 0.5rem;
+  color: var(--color-primary);
+  border-radius: 0.4rem;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
 /* ==================MEDIA QUERIES (SMALL DEVICES)============= */
 
 @media screen and (max-width: 600px) {

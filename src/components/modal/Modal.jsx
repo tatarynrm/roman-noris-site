@@ -1,7 +1,7 @@
 import React from "react";
 import "./modal.css";
 import { FcApproval } from "react-icons/fc";
-const Modal = ({ modalActive, setModalActive, name }) => {
+const Modal = ({ modalActive, setModalActive, name, userLocation }) => {
   const hideModal = () => {
     setModalActive(!modalActive);
     document.body.style.overflow = "auto";
@@ -23,6 +23,13 @@ const Modal = ({ modalActive, setModalActive, name }) => {
         <button onClick={() => hideModal()} className="btn btn-primary">
           Close
         </button>
+        {userLocation?.map((user) => (
+          <div key={user.plusCode} className="modal__user-location">
+            <div>
+              Your Location : {user.countryName} - {user.locality}
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

@@ -8,7 +8,8 @@ import emailjs from "emailjs-com";
 import { sendMessageTelegram } from "../../services/telegram";
 import { useState } from "react";
 import Modal from "../modal/Modal";
-const Contact = () => {
+const Contact = ({ userLocation }) => {
+  console.log(userLocation);
   const [modalActive, setModalActive] = useState(false);
   const [name, setName] = useState("");
   const form = useRef();
@@ -88,6 +89,7 @@ const Contact = () => {
           modalActive={modalActive}
           setModalActive={setModalActive}
           name={name}
+          userLocation={userLocation}
         />
       ) : null}
     </section>
