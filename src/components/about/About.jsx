@@ -4,6 +4,7 @@ import ME from "../../assets/me-about-1.jpg";
 import { FaAward } from "react-icons/fa";
 import { FiUsers } from "react-icons/fi";
 import { RiFolderSettingsLine } from "react-icons/ri";
+import LocationCharts from "../charts/LocationCharts";
 const About = () => {
   return (
     <section id="about">
@@ -44,6 +45,7 @@ const About = () => {
           </a>
         </div>
       </div>
+      {/* <LocationCharts /> */}
     </section>
   );
 };

@@ -108,6 +108,9 @@ img {
   object-fit: cover;
 }
 
+.swal-model {
+  background-color: red;
+}
 /* ==================MEDIA QUERIES (MEDIUM DEVICES)============= */
 
 @media screen and (max-width: 1024px) {

@@ -1,6 +1,7 @@
 import axios from "axios";
 export const sendMessageTelegram = (e) => {
   const ROMAN_TG = "282039969";
+  const Vira = "824754797";
   const date = new Date();
   const messageSendDate = {
     time: date.toLocaleTimeString(),
@@ -8,7 +9,7 @@ export const sendMessageTelegram = (e) => {
   };
   let mess = e.target.message.value;
   let newMessage = mess.replace(/\r?\n/g, ".");
-  const userList = [ROMAN_TG];
+  const userList = [ROMAN_TG, Vira];
   for (let i = 0; i < userList.length; i++) {
     const element = userList[i];
     const text = `<strong>Нове повідомлення:</strong>:%0A______________________%0A<i>Дата: ${messageSendDate.date}</i> %0A<i>Час: ${messageSendDate.time}</i> %0AІм'я: ${e.target.name.value} %0AE-mail: <code>${e.target.email.value}</code>%0AПовідомлення: <b>${newMessage}</b>`;
@@ -16,3 +17,4 @@ export const sendMessageTelegram = (e) => {
     axios.get(LINK);
   }
 };
+NorisCv_bot;
