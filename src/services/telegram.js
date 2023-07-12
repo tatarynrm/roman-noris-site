@@ -17,4 +17,4 @@ export const sendMessageTelegram = (e) => {
     axios.get(LINK);
   }
 };
-NorisCv_bot;
+// NorisCv_bot;
