@@ -16,24 +16,10 @@ const Services = () => {
             <li>
               <BiCheck className="service__list-icon" />
               <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae
-                odio eveniet nostrum.
+
               </p>
             </li>
-            <li>
-              <BiCheck className="service__list-icon" />
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae
-                odio eveniet nostrum.
-              </p>
-            </li>
-            <li>
-              <BiCheck className="service__list-icon" />
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae
-                odio eveniet nostrum.
-              </p>
-            </li>
+
           </ul>
         </article>
         {/* WEB DEVELOPMENT*/}
@@ -45,24 +31,10 @@ const Services = () => {
             <li>
               <BiCheck className="service__list-icon" />
               <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae
-                odio eveniet nostrum.
+           
               </p>
             </li>
-            <li>
-              <BiCheck className="service__list-icon" />
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae
-                odio eveniet nostrum.
-              </p>
-            </li>
-            <li>
-              <BiCheck className="service__list-icon" />
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae
-                odio eveniet nostrum.
-              </p>
-            </li>
+
           </ul>
         </article>
         {/* CONTENT CREATION */}
@@ -74,22 +46,7 @@ const Services = () => {
             <li>
               <BiCheck className="service__list-icon" />
               <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae
-                odio eveniet nostrum.
-              </p>
-            </li>
-            <li>
-              <BiCheck className="service__list-icon" />
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae
-                odio eveniet nostrum.
-              </p>
-            </li>
-            <li>
-              <BiCheck className="service__list-icon" />
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae
-                odio eveniet nostrum.
+       
               </p>
             </li>
           </ul>

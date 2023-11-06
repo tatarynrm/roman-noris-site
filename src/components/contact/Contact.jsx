@@ -19,21 +19,21 @@ const Contact = ({ userLocation }) => {
   const sendEmail = (e) => {
     e.preventDefault();
     sendMessageTelegram(e);
-    emailjs
-      .sendForm(
-        "service_xk4wlsn",
-        "template_tiqbpmq",
-        form.current,
-        "zVlKVNP2tP7ZpJWUN"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+    // emailjs
+    //   .sendForm(
+    //     "service_xk4wlsn",
+    //     "template_tiqbpmq",
+    //     form.current,
+    //     "zVlKVNP2tP7ZpJWUN"
+    //   )
+    //   .then(
+    //     (result) => {
+    //       console.log(result.text);
+    //     },
+    //     (error) => {
+    //       console.log(error.text);
+    //     }
+    //   );
     setModalActive(!modalActive);
     e.target.reset();
   };
