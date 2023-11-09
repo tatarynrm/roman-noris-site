@@ -11,6 +11,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 // import sucessfulLookup from "./services/userGeolocation";
 import fetching from "./axios";
+const tele  = window.Telegram.WebApp
 const App = () => {
   const [userLocation, setUserLocation] = useState([]);
   const sucessfulLookup = async (position) => {
@@ -39,6 +40,9 @@ const App = () => {
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(sucessfulLookup);
   }, []);
+useEffect(()=>{
+tele.ready();
+},[])
 
   return (
     <>
